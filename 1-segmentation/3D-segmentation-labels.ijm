@@ -1,0 +1,10 @@
+title = getTitle();
+run("Gaussian Blur 3D...", "x=3 y=3 z=1");
+setAutoThreshold("Otsu dark stack");
+setOption("BlackBackground", true);
+run("Convert to Mask", "method=Otsu background=Dark black");
+run("3D OC Options", "volume surface nb_of_obj._voxels nb_of_surf._voxels integrated_density mean_gray_value std_dev_gray_value median_gray_value minimum_gray_value maximum_gray_value centroid mean_distance_to_surface std_dev_distance_to_surface median_distance_to_surface centre_of_mass bounding_box dots_size=5 font_size=10 white_numbers store_results_within_a_table_named_after_the_image_(macro_friendly) redirect_to=none");
+run("3D Objects Counter", "threshold=128 slice=37 min.=81 max.=314572800 exclude_objects_on_edges objects");
+run("glasbey_on_dark");
+close(title);
+rename(title);
