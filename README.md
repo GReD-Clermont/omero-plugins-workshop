@@ -4,6 +4,12 @@ This repository contains the scripts used for the I2K 2022 workshop "Batch proce
 
 Sample images should normally be available from the release page.
 
+## GitHub repositories
+
+[omero_batch-plugin](https://github.com/GReD-Clermont/omero_batch-plugin)
+
+[omero_macro-extensions](https://github.com/GReD-Clermont/omero_macro-extensions)
+
 
 ## Setup
 
