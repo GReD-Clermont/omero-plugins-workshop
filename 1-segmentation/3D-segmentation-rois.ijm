@@ -32,7 +32,9 @@ function labels_to_rois_4D(labelsTitle) {
                 if(Roi.size > 0) {
                     Roi.setPosition(0, z, t);
                     Roi.setProperty("ROI", i+1);
-                    // Use ROI groups, but only up to 255 for now
+                    Roi.setProperty("ROI_NAME", "Cell #" + i+1);
+                    Roi.setName("Cell #" + i+1 + " (z=" + z + ", t=" + t + ")");
+                    // Use ROI groups, but only up to 255
                     if(n_cells < 256) Roi.setGroup(i+1);
                     Overlay.addSelection();
                 }
